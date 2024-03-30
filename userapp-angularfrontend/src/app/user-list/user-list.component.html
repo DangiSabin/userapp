@@ -1,0 +1,22 @@
+<div *ngIf="users">
+<table>
+    <thead>
+        <th>User ID |</th>
+        <th>First Name |</th>
+        <th>Last Name |</th>
+        <th>Email |</th>
+        <th>Actions</th>
+    </thead>
+
+    <tbody *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td><button (click)="viewUser(user)">VIEW</button></td>
+        <td><button (click)="updateUser(user)">UPDATE</button></td>
+        <td><button (click)="deleteUser(user)">DELETE</button></td>
+    </tbody>
+</table>
+</div><br/>
+<button (click)="addUser()">ADD</button>

@@ -1,0 +1,7 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    First Name: <input type="text" name="firstName" [(ngModel)]="newUser.firstName" placeholder="Enter User First Name"/><br/>
+    Last Name: <input type="text" name="lastName" [(ngModel)]="newUser.lastName" placeholder="Enter User Last Name"/><br/>
+    Email: <input type="email" name="email" [(ngModel)]="newUser.email" placeholder="Provide user email"/><br/><br/>
+    <button (click)="back()">BACK</button>&nbsp;
+    <button type="submit">ADD USER</button>
+</form>
